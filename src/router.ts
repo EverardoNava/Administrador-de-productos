@@ -16,7 +16,6 @@ router.get("/:id",
 router.post("/",
 
     //Validar datos
-    param("id").isInt().withMessage("ID no valido"),
     body("name").notEmpty().withMessage("El nombre del producto es requerido"),
     body("price")
         .isNumeric().withMessage("Valor no valido")
