@@ -5,7 +5,7 @@ export const getProducts = async (req: Request, res: Response) => {
 
     const products = await Product.findAll({
         order: [
-            ["price", "DESC"]
+            ["id", "ASC"]
         ],
     });
     res.json({ data: products });
